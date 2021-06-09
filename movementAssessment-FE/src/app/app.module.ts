@@ -11,6 +11,7 @@ import { AboutComponent } from './layout/about/about.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { ProjectComponent } from './features/project/project.component';
 import { BannerComponent } from './layout/banner/banner.component';
+import { CreateProjectComponent } from './features/create-project/create-project.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BannerComponent } from './layout/banner/banner.component';
     AboutComponent,
     TopBarComponent,
     ProjectComponent,
-    BannerComponent
+    BannerComponent,
+    CreateProjectComponent
   ],
   imports: [
     BrowserModule,
