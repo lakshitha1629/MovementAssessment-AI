@@ -4,9 +4,101 @@
       <div class="col-md-8 col-lg-6 text-center">
         <div class="section-heading">
           <!-- Heading -->
-          <h2 class="section-title">Create Your Own Project Hear</h2>
+          <h2 class="section-title">Create Your Own Project</h2>
         </div>
       </div>
+    </div>
+    <div class="justify-content-center">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Step #01</a>
+          <ng-template ngbNavContent>
+            <div class="row justify-content-md-center">
+              <form class="form-inline">
+                <div class="form-group">
+                  <label>Add Your Project Name</label>
+                  <input
+                    type="text"
+                    placeholder="Enter Project Name"
+                    class="form-control mx-sm-3"
+                    aria-describedby="passwordHelpInline"
+                  />
+                  <button type="submit" class="btn-new btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Step #02</a>
+          <ng-template ngbNavContent>
+            <form>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Example textarea</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </form>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Final Result</a>
+          <ng-template ngbNavContent>
+            <div class="row justify-content-md-center">
+              <h4>Predict Result</h4>
+            </div>
+            <div class="row justify-content-md-center">
+              <h2 class="badge badge-warning">Output</h2>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+
+      <div [ngbNavOutlet]="nav" class="mt-5"></div>
+
+      <!-- <pre>Active: {{ active }}</pre> -->
     </div>
   </div>
 </section>

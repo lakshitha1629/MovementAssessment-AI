@@ -60,6 +60,17 @@ img {
   letter-spacing: 0.5px;
 }
 
+.btn-new {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  position: relative;
+  padding: 0.5rem;
+  border: 0.1rem solid transparent;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.5px;
+  border-radius: 0.2rem;
+}
+
 .btn-circle {
   display: inline-flex;
   width: 4.20313rem !important;
