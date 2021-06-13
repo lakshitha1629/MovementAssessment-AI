@@ -133,6 +133,7 @@
     }
   },
   "cli": {
-    "analytics": "ea9f9b0e-d2e8-46b2-a36f-39f9d7090b91"
+    "analytics": "ea9f9b0e-d2e8-46b2-a36f-39f9d7090b91",
+    "defaultCollection": "@datorama/akita"
   }
 }

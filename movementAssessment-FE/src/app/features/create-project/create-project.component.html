@@ -34,52 +34,117 @@
         <li [ngbNavItem]="2">
           <a ngbNavLink>Step #02</a>
           <ng-template ngbNavContent>
-            <form>
+            <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Collar bone x</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter collar bone x"
+                  formControlName="Collar_bone_x"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Collar bone y</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Collar bone y"
+                  formControlName="Collar_bone_y"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Collar bone z</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Collar bone z"
+                  formControlName="Collar_bone_z"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Fore arm x</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Fore arm x"
+                  formControlName="Fore_arm_x"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Fore arm y</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Fore arm y"
+                  formControlName="Fore_arm_y"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Fore arm z</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Fore arm z"
+                  formControlName="Fore_arm_z"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Hand x</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Hand x"
+                  formControlName="Hand_x"
+                ></textarea>
               </div>
 
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Hand y</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Hand y"
+                  formControlName="Hand_y"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Hand z</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Hand z"
+                  formControlName="Hand_z"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Upper arm x</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Upper arm x"
+                  formControlName="Upper_arm_x"
+                ></textarea>
               </div>
               <div class="form-group">
-                <label>Example textarea</label>
-                <textarea class="form-control" rows="3"></textarea>
+                <label>Upper arm y</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Upper arm y"
+                  formControlName="Upper_arm_y"
+                ></textarea>
               </div>
+              <div class="form-group">
+                <label>Upper arm z</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Enter Upper arm z"
+                  formControlName="Upper_arm_z"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
             </form>
           </ng-template>
         </li>
