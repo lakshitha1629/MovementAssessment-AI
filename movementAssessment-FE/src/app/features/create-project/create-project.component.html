@@ -23,7 +23,12 @@
                     class="form-control mx-sm-3"
                     aria-describedby="passwordHelpInline"
                   />
-                  <button type="submit" class="btn-new btn-primary">
+                  <button
+                    type="submit"
+                    class="btn-new btn-primary"
+                    [disabled]="active === 2"
+                    (click)="nav.select(2)"
+                  >
                     Submit
                   </button>
                 </div>
@@ -144,7 +149,19 @@
                   formControlName="Upper_arm_z"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Save</button>
+              <button *ngIf="!Output" type="submit" class="btn btn-primary">
+                Save
+              </button>
+              <div *ngIf="Output">
+                <button
+                  type="submit"
+                  class="btn btn-dark"
+                  [disabled]="active === 3"
+                  (click)="nav.select(3)"
+                >
+                  Go to Your Final Outcome
+                </button>
+              </div>
             </form>
           </ng-template>
         </li>
@@ -155,15 +172,22 @@
               <h4>Predict Result</h4>
             </div>
             <div class="row justify-content-md-center">
-              <h2 class="badge badge-warning">Output</h2>
+              <div *ngIf="Output == 0">
+                <h2 class="badge badge-warning" style="font-size: 24px">
+                  Circular Movements
+                </h2>
+              </div>
+              <div *ngIf="Output == 1">
+                <h2 class="badge badge-warning" style="font-size: 24px">
+                  Straight Movements
+                </h2>
+              </div>
             </div>
           </ng-template>
         </li>
       </ul>
 
       <div [ngbNavOutlet]="nav" class="mt-5"></div>
-
-      <!-- <pre>Active: {{ active }}</pre> -->
     </div>
   </div>
 </section>

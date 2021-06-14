@@ -16,6 +16,9 @@ import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,10 +36,14 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule
+    AkitaNgRouterStoreModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgBootstrapFormValidationModule.forRoot(),
   ],
-  providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }}],
+  providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: environment.apiUrl } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

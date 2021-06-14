@@ -9,6 +9,8 @@ import { ProjectDataService } from 'src/app/core/service/project-data.service';
 })
 export class CreateProjectComponent implements OnInit {
   active = 1;
+  Output: number;
+
   formGroup: FormGroup = new FormGroup({
     Collar_bone_x: new FormControl('', [Validators.required]),
     Collar_bone_y: new FormControl('', [Validators.required]),
@@ -47,15 +49,18 @@ export class CreateProjectComponent implements OnInit {
       Upper_arm_z: this.formGroup.controls.Upper_arm_z.value
     }
 
-    this.projectDataService.addData(data).subscribe({
-      next: data => {
+
+    if (this.formGroup.valid == true) {
+      this.projectDataService.getPrediction(data).subscribe(res => {
+        console.log(res);
+        this.Output = res.predict;
+        console.log('Succefully Added');
         this.formGroup.reset();
-        console.log('Successfully Added');
-      },
-      error: error => {
-        console.log(error);
-      }
-    });
+      });
+    }
+    else {
+      console.log('Something wrong');
+    }
 
   }
 

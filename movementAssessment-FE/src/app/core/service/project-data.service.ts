@@ -10,8 +10,9 @@ export class ProjectDataService {
 
   constructor(private http: HttpClient) { }
 
-  addData(data: ProjectDataRequest) {
-    return this.http.post<any>(`${environment.apiUrl}/addData`, data);
+  getPrediction(data: ProjectDataRequest) {
+    return this.http.post<any>(`${environment.apiUrl}getPrediction`, data);
   }
 
 }
+
