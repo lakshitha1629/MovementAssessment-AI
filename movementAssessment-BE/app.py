@@ -2,6 +2,7 @@ from flask import Flask, request, redirect
 from flask_restful import Resource, Api
 import os
 import re
+import prediction
 
 app = Flask(__name__)
 api = Api(app)
@@ -21,12 +22,22 @@ class Test(Resource):
         except Exception as error:
             return {'error': error}
 
-class Multi(Resource):
-    def get(self, num):
-        return {'Result':num*10}
+class GetPrediction(Resource):
+    def get(self):
+        return {"error":"Invalid Method."}
+
+    def post(self):
+        try:
+            data = request.get_json()
+            # print(data)
+            predict = prediction.predict_Output(data)
+            return {'predict':predict}
+
+        except Exception as error:
+            return {'error': error}
 
 api.add_resource(Test,'/')
-api.add_resource(Multi,'/multi/<int:num>')
+api.add_resource(GetPrediction,'/getPrediction')
 
 if __name__ == '__main__':
     app.run(debug=True)
