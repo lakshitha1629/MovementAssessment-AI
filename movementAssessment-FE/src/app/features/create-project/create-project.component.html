@@ -39,130 +39,153 @@
         <li [ngbNavItem]="2">
           <a ngbNavLink>Step #02</a>
           <ng-template ngbNavContent>
-            <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
-              <div class="form-group">
-                <label>Collar bone x</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter collar bone x"
-                  formControlName="Collar_bone_x"
-                ></textarea>
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="../../../assets/images/points.png"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="form-group">
-                <label>Collar bone y</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Collar bone y"
-                  formControlName="Collar_bone_y"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Collar bone z</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Collar bone z"
-                  formControlName="Collar_bone_z"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Fore arm x</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Fore arm x"
-                  formControlName="Fore_arm_x"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Fore arm y</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Fore arm y"
-                  formControlName="Fore_arm_y"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Fore arm z</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Fore arm z"
-                  formControlName="Fore_arm_z"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Hand x</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Hand x"
-                  formControlName="Hand_x"
-                ></textarea>
-              </div>
+              <div class="col-8">
+                <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <label
+                      >Shoulder x coordinate/rotation in angles (joint number
+                      5)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter shoulder x coordinate/rotation in angles"
+                      formControlName="Collar_bone_x"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Shoulder y coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter shoulder y coordinate/rotation"
+                      formControlName="Collar_bone_y"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Shoulder z coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter shoulder z coordinate/rotation"
+                      formControlName="Collar_bone_z"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label
+                      >Wrist x coordinate/rotation in angles (joint number
+                      7)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter wrist x coordinate/rotation in angles"
+                      formControlName="Fore_arm_x"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Wrist y coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter wrist y coordinate/rotation"
+                      formControlName="Fore_arm_y"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Wrist z coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter wrist z coordinate/rotation"
+                      formControlName="Fore_arm_z"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label
+                      >Hand x coordinate/rotation in angles (joint number
+                      8)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Hand x coordinate/rotation in angles"
+                      formControlName="Hand_x"
+                    ></textarea>
+                  </div>
 
-              <div class="form-group">
-                <label>Hand y</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Hand y"
-                  formControlName="Hand_y"
-                ></textarea>
+                  <div class="form-group">
+                    <label>Hand y coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Hand y coordinate/rotation"
+                      formControlName="Hand_y"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Hand z coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Hand z coordinate/rotation"
+                      formControlName="Hand_z"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label
+                      >Elbow x coordinate/rotation in angles (joint number
+                      6)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Elbow x coordinate/rotation in angles"
+                      formControlName="Upper_arm_x"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Elbow y coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Elbow y coordinate/rotation"
+                      formControlName="Upper_arm_y"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Elbow z coordinate/rotation</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Enter Elbow z coordinate/rotation"
+                      formControlName="Upper_arm_z"
+                    ></textarea>
+                  </div>
+                  <button *ngIf="!Output" type="submit" class="btn btn-primary">
+                    Save
+                  </button>
+                  <div *ngIf="Output">
+                    <button
+                      type="submit"
+                      class="btn btn-dark"
+                      [disabled]="active === 3"
+                      (click)="nav.select(3)"
+                    >
+                      Go to Your Final Outcome
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div class="form-group">
-                <label>Hand z</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Hand z"
-                  formControlName="Hand_z"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Upper arm x</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Upper arm x"
-                  formControlName="Upper_arm_x"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Upper arm y</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Upper arm y"
-                  formControlName="Upper_arm_y"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label>Upper arm z</label>
-                <textarea
-                  class="form-control"
-                  rows="3"
-                  placeholder="Enter Upper arm z"
-                  formControlName="Upper_arm_z"
-                ></textarea>
-              </div>
-              <button *ngIf="!Output" type="submit" class="btn btn-primary">
-                Save
-              </button>
-              <div *ngIf="Output">
-                <button
-                  type="submit"
-                  class="btn btn-dark"
-                  [disabled]="active === 3"
-                  (click)="nav.select(3)"
-                >
-                  Go to Your Final Outcome
-                </button>
-              </div>
-            </form>
+            </div>
           </ng-template>
         </li>
         <li [ngbNavItem]="3">
